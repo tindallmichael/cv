@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Tindall - IT Consultant CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #475569;
+        }
+        
+        .contact-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e40af;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .profile-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #475569;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box h3 {
+            color: #1e40af;
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .highlight-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .highlight-box li {
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.6;
+        }
+        
+        .highlight-box .quote {
+            font-style: italic;
+            color: #1e40af;
+            font-size: 13px;
+            margin-top: 12px;
+            padding: 10px;
+            background: rgba(37, 99, 235, 0.05);
+            border-radius: 4px;
+        }
+        
+        .job {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .job-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .company {
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        .job-meta {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+        }
+        
+        .job-description {
+            font-size: 13px;
+            color: #475569;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .job ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .job li {
+            margin-bottom: 6px;
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+        }
+        
+        .tech-stack {
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #64748b;
+        }
+        
+        .tech-stack strong {
+            color: #475569;
+            font-weight: 600;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            padding: 12px 15px;
+            border-radius: 4px;
+            border-left: 3px solid #2563eb;
+        }
+        
+        .skill-category strong {
+            display: block;
+            color: #1e40af;
+            font-size: 14px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        
+        .skill-category span {
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        
+        .condensed-roles {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .condensed-role {
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .condensed-role:last-child {
+            margin-bottom: 0;
+        }
+        
+        .condensed-role strong {
+            color: #1e293b;
+            display: block;
+            font-weight: 600;
+        }
+        
+        .condensed-role .role-meta {
+            color: #64748b;
+            font-size: 12px;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+        
+        .condensed-role ul {
+            margin-left: 18px;
+            margin-top: 4px;
+        }
+        
+        .condensed-role li {
+            font-size: 12px;
+            margin-bottom: 3px;
+            color: #475569;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+        
+        .education-item strong {
+            color: #1e293b;
+            font-weight: 600;
+            display: block;
+        }
+        
+        .education-item .edu-meta {
+            color: #64748b;
+            font-size: 12px;
+            font-style: italic;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            font-size: 13px;
+        }
+        
+        .info-item strong {
+            display: block;
+            color: #1e40af;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .info-item span {
+            color: #475569;
+        }
+        
+        .references {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .reference {
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .reference strong {
+            display: block;
+            color: #1e293b;
+            font-size: 13px;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .reference .ref-title {
+            color: #64748b;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+        
+        .reference .ref-contact {
+            color: #475569;
+            font-size: 11px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        
+        .key-expertise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .expertise-tag {
+            background: #2563eb;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .job {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>MICHAEL TINDALL</h1>
+        <div class="subtitle">IT Software Architect • DevOps Specialist • Full-Stack Developer</div>
+        <div class="contact-info">
+            <span>📍 Hermanus, Western Cape, South Africa</span>
+            <span>📧 tindall.michael@gmail.com</span>
+            <span>📱 +27 83 676 5906</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Profile</div>
+        <p class="profile-text">
+            Experienced Software Architect and IT Consultant with 15+ years delivering enterprise solutions for global automotive manufacturing. Specialized in distributed system architecture, DevOps automation, and cloud infrastructure. Proven track record leading cross-functional agile teams across international locations while maintaining hands-on technical excellence in full-stack development and infrastructure management.
+        </p>
+        <p class="profile-text">
+            Early adopter and advocate of AI-augmented development, leveraging AI agents and workflow automation throughout all stages of software design and development. Pioneering the use of generative AI to accelerate development cycles, reduce coding barriers, and enable rapid prototyping across multiple technology stacks.
+        </p>
+        <div class="key-expertise">
+            <span class="expertise-tag">Enterprise Architecture</span>
+            <span class="expertise-tag">Cloud Infrastructure</span>
+            <span class="expertise-tag">DevOps & CI/CD</span>
+            <span class="expertise-tag">AI-Augmented Development</span>
+            <span class="expertise-tag">Microservices</span>
+            <span class="expertise-tag">Distributed Agile Teams</span>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h3>AI-Driven Development Approach</h3>
+        <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">
+            <strong>Transforming Software Development with AI</strong>
+        </p>
+        <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">
+            Extensive adoption of artificial intelligence across all stages of software design, development, and delivery. Pioneering the integration of AI agents and automated workflows to streamline development processes, reduce time-to-market, and democratize coding capabilities across teams.
+        </p>
+        <ul>
+            <li><strong>AI Agent Workflows:</strong> Implemented AI-powered agent systems that handle repetitive coding tasks, code reviews, and documentation generation</li>
+            <li><strong>Barrier Reduction:</strong> Leveraged generative AI to enable developers to work across unfamiliar technology stacks using natural language and pseudocode</li>
+            <li><strong>Development Acceleration:</strong> Transformed development approach where understanding and intent (pseudocode/natural language) become the primary coding method, with AI handling implementation details across any language or framework</li>
+            <li><strong>Knowledge Democratization:</strong> Enabled team members to contribute to diverse codebases without deep language-specific expertise, focusing on problem-solving over syntax</li>
+        </ul>
+        <div class="quote">
+            "In modern development, clear thinking and pseudocode are the new programming languages - AI handles the translation to any target technology."
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        <strong>Senior IT Architect & Developer</strong> • <span class="company">BMW AG - PQPB Shopfloor Team</span>
+                    </div>
+                    <div class="job-meta">Rosslyn / Munich | February 2019 — Present</div>
+                </div>
+            </div>
+            <p class="job-description">
+                Lead architect for the Paint Quality, Painted Body (PQPB) Shopfloor management system with responsibility for all architectural decisions, system design, and implementation strategy.
+            </p>
+            <ul>
+                <li>Architectural design and decision-making for PQPB product across BMW's global manufacturing network</li>
+                <li>DevOps implementation including CI/CD pipeline design and configuration</li>
+                <li>GitOps repository structure with ArgoCD for deployment orchestration</li>
+                <li>Helm chart development and integration for standardized deployments</li>
+                <li>ArgoCD ApplicationSet implementation for multi-plant deployment across global BMW locations</li>
+                <li>Cloud infrastructure setup and management on OpenShift and Azure platforms</li>
+                <li>Technical leadership and mentoring of development team</li>
+                <li>Integration of AI-powered development tools and agent workflows across the development lifecycle, dramatically accelerating feature delivery and reducing technical barriers for team members</li>
+            </ul>
+            <div class="tech-stack">
+                <strong>Technology Stack:</strong> Angular • Node.js • Java • Kafka • Docker • Kubernetes • OpenShift • Azure • Jenkins • GitHub • Git Actions • ArgoCD • Helm • Nexus • SonarQube • Cypress • Liquibase • Prometheus • Kibana • PostgreSQL • Sequelize • BitBucket
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        <strong>Chief Architect & Senior Software Engineer</strong> • <span class="company">BMW AG - DSMP</span>
+                    </div>
+                    <div class="job-meta">Rosslyn / Munich | February 2019 — Present</div>
+                </div>
+            </div>
+            <p class="job-description">
+                Chief architect and senior software engineer for the BMW Digital Shopfloor Management Platform (DSMP).
+            </p>
+            <ul>
+                <li>Design and implementation of "agile working model" for distributed scaled scrum teams</li>
+                <li>Support and implementation of CI/CD using Jenkins</li>
+                <li>Member of DSMP Core Feature team</li>
+                <li>Partial Scrum Master (supportive role)</li>
+                <li>Organizational team leader of 2 feature teams</li>
+            </ul>
+            <div class="tech-stack">
+                <strong>Technology Stack:</strong> Angular • Node.js • Java • Kafka • Docker • Jenkins • GitHub • Git Actions • Cypress • Liquibase • OpenShift • Prometheus • Kibana • PostgreSQL
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        <strong>Senior Software Developer & Team Lead</strong> • <span class="company">BMW AG - Fast Reporting</span>
+                    </div>
+                    <div class="job-meta">Rosslyn / Munich | March 2017 — February 2019</div>
+                </div>
+            </div>
+            <p class="job-description">
+                Senior lead developer and system designer of the BMW Shopfloor Production Control Cockpit (PCC) - single point of truth for shopfloor production reporting KPIs.
+            </p>
+            <ul>
+                <li>Led Fast Reporting team as Scrum Master</li>
+                <li>Successfully orchestrated distributed feature team across South Africa and Germany (Munich, Regensburg, Leipzig)</li>
+                <li>Full-stack development and system architecture</li>
+            </ul>
+            <div class="tech-stack">
+                <strong>Technology Stack:</strong> OpenUI5 • Java • Maven • Payara • Oracle • Angular 2+ • Jenkins • BitBucket • SVN • Linux
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        <strong>Senior SAP ABAP Developer</strong> • <span class="company">BMW AG - Application Operations</span>
+                    </div>
+                    <div class="job-meta">Rosslyn | October 2016 — March 2017</div>
+                </div>
+            </div>
+            <p class="job-description">
+                Solo design, development, and deployment of the Critical Access Monitor for BMW.
+            </p>
+            <ul>
+                <li>Central multi-threaded ABAP activity monitor deployed on Solution Manager</li>
+                <li>Monitors critical SAP authorization activities over 100+ SAP systems</li>
+                <li>Multi-threaded capability allows parallel connection and scanning of all configured systems (100 systems in 12 seconds)</li>
+                <li>Automated violation collection with central dashboard and email notifications</li>
+            </ul>
+            <div class="tech-stack">
+                <strong>Technology Stack:</strong> SAP ABAP OO • SAPUI5 • OData • RFC • HTML Templates • BSPs
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 25px;">Early Career — SAP Development & Operations</div>
+        <div class="job-meta" style="margin-bottom: 10px;">Various BMW Locations | July 2008 — October 2016</div>
+        
+        <div class="condensed-roles">
+            <div class="condensed-role">
+                <strong>Senior SAP CRM Developer</strong>
+                <div class="role-meta">BMW Marketing, Midrand | Aug 2015 — Oct 2016</div>
+                <ul>
+                    <li>SAP CRM BOL development and social media integration for BMW South Africa and Mini</li>
+                    <li>SMS template creation tool for marketing campaigns</li>
+                    <li>Interactive call centre workflows for financial and customer care</li>
+                </ul>
+            </div>
+
+            <div class="condensed-role">
+                <strong>Senior ABAP Developer</strong>
+                <div class="role-meta">BMW SAP Competence Hub, Pretoria | Jul 2012 — Sep 2015</div>
+                <ul>
+                    <li>Application Responsible, Functional Designer, and solo developer for BMW CKD Quality Management (QM) template (India and Brazil plants)</li>
+                    <li>QM template covered warehouse and line-side quality processes including inspections, reworks, scrapping, supply-chain integration, and warehouse operations with scanners/printers</li>
+                    <li>Support on STARD, ILS, Thailand, Brazil & India projects</li>
+                </ul>
+            </div>
+
+            <div class="condensed-role">
+                <strong>Start-up Manager</strong>
+                <div class="role-meta">BMW Application Operations, Rosslyn | Oct 2011 — Jul 2012</div>
+                <ul>
+                    <li>Lead SAP Start-up Manager for IT Programme China Project and India 40k Project</li>
+                    <li>Planning and coordination of "Design for Run" activities and project-to-operations handover</li>
+                    <li>Go-live orchestration and operational readiness assessment (BRI/ORI)</li>
+                </ul>
+            </div>
+
+            <div class="condensed-role">
+                <strong>IT Applications Specialist</strong>
+                <div class="role-meta">BMW Operations, Rosslyn | Jul 2008 — Aug 2011</div>
+                <ul>
+                    <li>Junior ABAP developer for Vehicle Distribution Centre systems</li>
+                    <li>SAP Authorizations specialist designing and implementing Roles & Rights per BMW SOD rulebooks</li>
+                    <li>Implementation of SAP system monitoring applications</li>
+                    <li>2nd and 3rd level operations support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Architecture & Design</strong>
+                <span>Microservices Architecture • Enterprise Architecture • System Design • API Design</span>
+            </div>
+            <div class="skill-category">
+                <strong>AI-Augmented Development</strong>
+                <span>AI Agents & Workflows • LLM Integration • Generative AI for Code Generation • AI-Assisted Design & Architecture • Prompt Engineering • Rapid Prototyping with AI</span>
+            </div>
+            <div class="skill-category">
+                <strong>DevOps & Infrastructure</strong>
+                <span>Docker • Kubernetes • OpenShift • Azure Cloud • Jenkins • GitHub • Git Actions • ArgoCD • Helm • GitOps • Nexus • SonarQube • Prometheus • Kibana</span>
+            </div>
+            <div class="skill-category">
+                <strong>Development</strong>
+                <span>JavaScript/TypeScript • Node.js • Angular 2+ • Java • Python • SAP ABAP OO • OpenUI5 • SAPUI5</span>
+            </div>
+            <div class="skill-category">
+                <strong>Data & Messaging</strong>
+                <span>PostgreSQL • Oracle • Sequelize • Liquibase • Kafka</span>
+            </div>
+            <div class="skill-category">
+                <strong>Methodologies</strong>
+                <span>Agile/Scrum • Scaled Agile (SAFe) • DevOps • CI/CD • Distributed Team Leadership • AI-Enhanced Development Practices</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="education-item">
+            <strong>Diploma in Java Programming</strong>
+            <div class="edu-meta">Van Zyl & Pritchard PTY (Ltd), Johannesburg | 2007</div>
+        </div>
+        <div class="education-item">
+            <strong>High School Diploma</strong>
+            <div class="edu-meta">St Davids Marist Inanda, Sandton | 2005</div>
+            <div style="font-size: 12px; color: #64748b; margin-top: 4px;">
+                Mathematics • Science • Computer Studies • English • Afrikaans • Geography
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Additional Information</div>
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>Languages</strong>
+                <span>English (Native) • Afrikaans (Native)</span>
+            </div>
+            <div class="info-item">
+                <strong>Interests</strong>
+                <span>Fishing • Kayaking • Golf • Online Courses • Research & Development • Food & Socializing</span>
+            </div>
+            <div class="info-item">
+                <strong>Personal Attributes</strong>
+                <span>Fast learner • Team player • Encouraging leader • Adaptable • Strong analytical thinking • AI advocate & early adopter • Dedicated to continuous learning and knowledge sharing</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional References</div>
+        <div class="references">
+            <div class="reference">
+                <strong>Hendrik Koekemoer</strong>
+                <div class="ref-title">BMW South Africa</div>
+                <div class="ref-contact">
+                    📧 hendrik.koekemoer@bmw.co.za<br>
+                    📱 +27 71 666 3072
+                </div>
+            </div>
+            <div class="reference">
+                <strong>Juergen Seitz</strong>
+                <div class="ref-title">BMW AG</div>
+                <div class="ref-contact">
+                    📧 juergen.seitz@bmw.de<br>
+                    📱 +49 941 770 9466
+                </div>
+            </div>
+            <div class="reference">
+                <strong>Martin Kleiner</strong>
+                <div class="ref-title">BMW AG</div>
+                <div class="ref-contact">
+                    📧 martin.km.kleiner@bmw.de<br>
+                    📱 +49 89 382 98368
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        CV Last Updated: September 2025
+    </div>
+</body>
+</html>
